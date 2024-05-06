@@ -1,0 +1,18 @@
+Il malware ottine la persistenza con l'inserimento di un nuovo valore all'interno della cchiave di registro Software\\Microsoft\\Windows\\CurrentVersion\\Run
+dove sono inclusi tutti quei programmi che si avviano all'avvio del sistema operativo.
+
+Le funzioni che vengono utilizzate sono:
+
+< RegOpenKey che permette di aprire la chiave selezionata.
+
+< RegSetValueEx che permette al malware di inserire un nuovo valore all'interno della chiave selezionata.
+
+
+Per connettersi ad internet il malware utilizza il client "Internet Explorer 8.0"  
+
+Il malware prova a connettersi all'URL www.malware12.com.
+La funzione che consente al malware di instaurare una connessione verso la URL è "InternetOpenURL".
+
+BONUS:
+
+Il comando assembly "lea" (Load Effective Address) viene utilizzato per caricare l'indirizzo effettivo di un'operando nella destinazione anziché caricare il valore dell'operando stesso. Mentre l'struzione "mov" viene utilizzata per caricare il valore effettivo dalla memoria in un registro, "lea" è utilizzato per caricare l'indirizzo effettivo di un'operando nella destinazione.
